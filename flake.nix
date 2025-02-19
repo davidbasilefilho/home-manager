@@ -18,7 +18,7 @@
         username = "basile";
       };
     in {
-      homeConfigurations."basile" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.${specialArgs.username} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         # Specify your home configuration modules.
