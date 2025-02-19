@@ -5,13 +5,6 @@
   home.homeDirectory = "/home/${specialArgs.username}";
   home.stateVersion = "25.05";
 
-  home.shellAliases = {
-    lazyg = "lazygit";
-    g = "git";
-    b = "bun";
-    bx = "bx";
-  };
-
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -24,6 +17,12 @@
       enable = true;
     };
 
+    shellAliases = {
+      lazyg = "lazygit";
+      g = "git";
+      b = "bun";
+      bx = "bx";
+    };
   };
 
   programs.zoxide = {
@@ -48,7 +47,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = "catppuccin-macchiato";
+      theme = "catppuccin_macchiato";
       editor = {
         cursorline = true;
         true-color = true;
