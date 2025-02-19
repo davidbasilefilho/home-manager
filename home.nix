@@ -34,6 +34,7 @@
     nerd-fonts.fira-code
     nil
     nixd
+    vesktop
   ];
 
   programs.home-manager.enable = true;
