@@ -45,6 +45,10 @@
     nixd
     vesktop
     appeditor
+    rustup
+    go
+    nodejs_23
+    bun
   ];
 
   xdg.desktopEntries = {
