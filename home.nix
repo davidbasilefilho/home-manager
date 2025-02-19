@@ -32,6 +32,8 @@
     nerd-fonts.zed-mono
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
+    nil
+    nixd
   ];
 
   programs.home-manager.enable = true;
