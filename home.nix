@@ -52,6 +52,11 @@
       editor = {
         cursorline = true;
         true-color = true;
+        lsp = {
+          display-messages = true;
+          display-progress-messages = true;
+          display-inlay-hints = true;
+        };
       };
     };
   };
