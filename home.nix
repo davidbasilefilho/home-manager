@@ -47,6 +47,13 @@
 
   programs.helix = {
     enable = true;
+    settings = {
+      theme = "catppuccin-macchiato";
+      editor = {
+        cursorline = true;
+        true-color = true;
+      };
+    };
   };
 
   programs.neovim = {
