@@ -1,4 +1,4 @@
-{ config, pkgs, specialArgs, ... }:
+{ config, pkgs, specialArgs, lib, ... }:
 
 {
   home.username = "${specialArgs.username}";
@@ -22,7 +22,7 @@
       lg = "lazygit";
       g = "git";
       b = "bun";
-      bx = "bx";
+      bx = "bunx";
       ls = "eza -lah";
     };
   };
