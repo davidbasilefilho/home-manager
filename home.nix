@@ -75,6 +75,8 @@
     defaultEditor = true;
   };
 
+  fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
     nerd-fonts.zed-mono
     nerd-fonts.jetbrains-mono
