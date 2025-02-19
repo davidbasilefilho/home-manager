@@ -37,5 +37,15 @@
     vesktop
   ];
 
+  xdg.desktopEntries = {
+    vesktop = {
+      name = "Vesktop";
+      genericName = "Discord client";
+      terminal = false;
+      exec = "${pkgs.vesktop}/bin/vesktop %U";
+      icon = "${pkgs.vesktop}/share/icons/hicolor/256x256/apps/vesktop.png";
+    };
+  };
+
   programs.home-manager.enable = true;
 }
