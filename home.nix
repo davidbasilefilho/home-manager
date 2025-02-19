@@ -8,6 +8,7 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
+    autocd = true;
     autosuggestion = {
       enable = true;
     };
@@ -15,6 +16,14 @@
     syntaxHighlighting = {
       enable = true;
     };
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+    options = [
+      "--cmd cd"
+    ];
   };
 
   programs.starship.enable = true;
