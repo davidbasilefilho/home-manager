@@ -5,6 +5,13 @@
   home.homeDirectory = "/home/${specialArgs.username}";
   home.stateVersion = "25.05";
 
+  home.shellAliases = {
+    lazyg = "lazygit";
+    g = "git";
+    b = "bun";
+    bx = "bx";
+  };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -16,6 +23,7 @@
     syntaxHighlighting = {
       enable = true;
     };
+
   };
 
   programs.zoxide = {
@@ -35,6 +43,15 @@
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
     flake = "/home/${specialArgs.username}/.config/home-manager";
+  };
+
+  programs.helix = {
+    enable = true;
+  };
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
   };
 
   home.packages = with pkgs; [
