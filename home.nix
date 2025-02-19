@@ -19,9 +19,11 @@
 
     shellAliases = {
       lazyg = "lazygit";
+      lg = "lazygit";
       g = "git";
       b = "bun";
       bx = "bx";
+      ls = "eza -lah";
     };
   };
 
@@ -36,6 +38,14 @@
   programs.starship.enable = true;
 
   programs.lazygit.enable = true;
+
+  programs.eza = {
+    enable = true;
+    enableZshIntegration = true;
+    colors = "always";
+    git = true;
+    icons = "auto";
+  };
 
   programs.nh = {
     enable = true;
@@ -77,6 +87,7 @@
     go
     nodejs_23
     bun
+    ripgrep
   ];
 
   xdg.desktopEntries = {
