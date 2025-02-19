@@ -25,6 +25,9 @@
       bx = "bunx";
       ls = "eza -lah";
     };
+    initExtra = ''
+      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    '';
   };
 
   programs.zoxide = {
@@ -78,9 +81,6 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
-    nerd-fonts.zed-mono
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.fira-code
     nil
     nixd
     vesktop
