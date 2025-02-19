@@ -8,15 +8,15 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    specialArgs = {
-            username = "basile";
-    };
   };
 
   outputs = { nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      specialArgs = {
+        username = "basile";
+      };
     in {
       homeConfigurations."basile" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
