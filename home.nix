@@ -41,6 +41,7 @@
         "pip"
         "podman"
         "rust"
+        "eza"
       ];
     };
   };
