@@ -58,10 +58,7 @@
     completionInit = "eval $(bat --completion zsh);";
   };
 
-  programs.mise = {
-    enable = true;
-    enableZshIntegration = true;
-  };
+  programs.go.enable = true;
 
   programs.zoxide = {
     enable = true;
@@ -112,9 +109,19 @@
   };
 
   programs.cava.enable = true;
-    programs.bat = {
-      enable = true;
-    };
+
+  programs.bat = {
+    enable = true;
+  };
+
+  programs.btop = {
+    enable = true;
+  };
+
+  programs.bun = {
+    enable = true;
+    enableGitIntegration = true;
+  };
 
   home.packages = with pkgs; [
     nil
@@ -122,9 +129,7 @@
     vesktop
     appeditor
     rustup
-    go
     nodejs_23
-    bun
     ripgrep
   ];
 
