@@ -1,4 +1,4 @@
-{ config, pkgs, specialArgs, lib, ... }:
+{ pkgs, specialArgs, ... }:
 
 {
   home.username = "${specialArgs.username}";
@@ -9,6 +9,7 @@
     enable = true;
     enableCompletion = true;
     autocd = true;
+
     autosuggestion = {
       enable = true;
     };
@@ -20,14 +21,33 @@
     shellAliases = {
       lazyg = "lazygit";
       lg = "lazygit";
-      g = "git";
       b = "bun";
       bx = "bunx";
       ls = "eza -lah";
     };
+
     initExtra = ''
       eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     '';
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "git"
+        "sudo"
+        "bun"
+        "dnf"
+        "npm"
+        "pip"
+        "podman"
+        "rust"
+      ];
+    };
+  };
+
+  programs.mise = {
+    enable = true;
+    enableZshIntegration = true;
   };
 
   programs.zoxide = {
