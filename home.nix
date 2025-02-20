@@ -44,6 +44,8 @@
         "eza"
       ];
     };
+
+    completionInit = "$(bat --completion zsh);";
   };
 
   programs.mise = {
@@ -99,7 +101,10 @@
     defaultEditor = true;
   };
 
-  fonts.fontconfig.enable = true;
+  programs.cava.enable = true;
+    programs.bat = {
+      enable = true;
+    };
 
   home.packages = with pkgs; [
     nil
