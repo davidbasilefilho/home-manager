@@ -24,10 +24,19 @@
       b = "bun";
       bx = "bunx";
       ls = "eza -lah";
+      cat = "bat";
     };
 
     initExtra = ''
-      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+      BREW_CMD="/home/linuxbrew/.linuxbrew/bin/brew"
+
+      if [ -x "$BREW_CMD" ]; then
+        eval "$($BREW_CMD shellenv zsh)"
+      else
+        echo "Brew not found at $BREW_CMD"
+      fi
+
+      unset BREW_CMD
     '';
 
     oh-my-zsh = {
@@ -42,10 +51,11 @@
         "podman"
         "rust"
         "eza"
+        "brew"
       ];
     };
 
-    completionInit = "$(bat --completion zsh);";
+    completionInit = "eval $(bat --completion zsh);";
   };
 
   programs.mise = {
