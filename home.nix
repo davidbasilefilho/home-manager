@@ -126,7 +126,6 @@
   home.packages = with pkgs; [
     nil
     nixd
-    vesktop
     appeditor
     rustup
     nodejs_23
