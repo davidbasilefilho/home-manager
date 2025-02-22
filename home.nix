@@ -132,17 +132,5 @@
     ripgrep
   ];
 
-  xdg.desktopEntries = {
-    vesktop = {
-      name = "Vesktop";
-      genericName = "Discord client";
-      terminal = false;
-      categories = [ "Network" "Utility" ];
-      mimeType = [ "x-scheme-handler/discord" ];
-      exec = "${pkgs.vesktop}/bin/vesktop %U";
-      icon = "${pkgs.vesktop}/share/icons/hicolor/256x256/apps/vesktop.png";
-    };
-  };
-
   programs.home-manager.enable = true;
 }
