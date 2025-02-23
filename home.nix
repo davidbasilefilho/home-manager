@@ -5,6 +5,11 @@
   home.homeDirectory = "/home/${specialArgs.username}";
   home.stateVersion = "25.05";
 
+  programs.mise = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -57,8 +62,6 @@
 
     completionInit = "eval $(bat --completion zsh);";
   };
-
-  programs.go.enable = true;
 
   programs.zoxide = {
     enable = true;
@@ -127,8 +130,6 @@
     nil
     nixd
     appeditor
-    rustup
-    nodejs_23
     ripgrep
   ];
 
