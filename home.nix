@@ -106,11 +106,6 @@
     };
   };
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
-
   programs.cava.enable = true;
 
   programs.bat = {
