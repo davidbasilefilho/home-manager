@@ -93,7 +93,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = "catppuccin_macchiato";
+      theme = "catppuccin_mocha";
       editor = {
         cursorline = true;
         true-color = true;
